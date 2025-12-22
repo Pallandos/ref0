@@ -9,21 +9,27 @@ There are 16 registers in the `x86_64` arch, each one of them is 64 bits long. B
 
 ## Table of all registers
 
-8-byte register | Bytes 0-3 | Bytes 0-1 | Byte 0
---- | --- | --- | ---
-`rax` | `eax` | `ax` | `al`
-`rcx` | `ecx` | `cx` | `cl`
-`rdx` | `edx` | `dx` | `dl`
-`rbx` | `ebx` | `bx` | `bl`
-`rsi` | `esi` | `si` | `sil`
-`rdi` | `edi` | `di` | `dil`
-`rsp` | `esp` | `sp` | `spl`
-`rbp` | `ebp` | `bp` | `bpl`
-`r8`  | `r8d` | `r8w` | `r8b`
-`r9` | `r9d` | `r9w` | `r9b`
-`r10` | `r10d` | `r10w` | `r10b`
-`r11` | `r11d` | `r11w` | `r11b`
-`r12` | `r12d` | `r12w` | `r12b`
-`r13` | `r13d` | `r13w` | `r13b`
-`r14` | `r14d` | `r14w` | `r14b`
-`r15` | `r15d` | `r15w` | `r15b`
+8-byte register | Note on usage | Save type | Bytes 0-3 | Bytes 0-1 | Byte 0
+--- | --- |--- | --- | --- | ---
+`rax` | Main register, used for the return value of functions | caller-save | `eax` | `ax` | `al`
+`rcx` | Used as counter, may be fourth arg | caller-save | `ecx` | `cx` | `cl`
+`rdx` | third arg | caller-save | `edx` | `dx` | `dl`
+`rbx` | | callee-save | `ebx` | `bx` | `bl`
+`rsi` | second arg | caller-save | `esi` | `si` | `sil`
+`rdi` | first arg | caller-save | `edi` | `di` | `dil`
+`rsp` | *stack* pointer (points to the topmost element) | caller-save | `esp` | `sp` | `spl`
+`rbp` | | callee-save | `ebp` | `bp` | `bpl`
+`r8`  | fivth arg | caller-save | `r8d` | `r8w` | `r8b`
+`r9` | sixth arg | caller-save | `r9d` | `r9w` | `r9b`
+`r10` | | caller-save | `r10d` | `r10w` | `r10b`
+`r11` | | caller-save | `r11d` | `r11w` | `r11b`
+`r12` | | callee-save | `r12d` | `r12w` | `r12b`
+`r13` | | callee-save | `r13d` | `r13w` | `r13b`
+`r14` | | callee-save | `r14d` | `r14w` | `r14b`
+`r15` | | callee-save | `r15d` | `r15w` | `r15b`
+
+> [!WARNING]
+> The *Note on usage* column contains facts which are *generally* true, because they are conventional. However, it may be different on some case.
+
+> [!NOTE]
+> The *save type* columns indicates if the value is saved across function calls. **caller-save** (volatile) means that the value of the register is not necessarily saved across function calls, and **callee-save** (non volatile) means that they are saved across function calls.
