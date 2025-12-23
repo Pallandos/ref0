@@ -2,12 +2,16 @@
 
 **Registers** are some very fast, and small memory addresses. They are a limited amount because this is the most expensive type of memory. CPU will use those addresses to execute operations, instead of having to go in the RAM, as it is much faster. 
 
-There are 16 registers in the `x86_64` arch, each one of them is 64 bits long. Because of retro compatibility concerns, each register contains the old versions of registers (32, 16 and 8 bits).
+There are 16 general purpose registers in the `x86_64` arch, each one of them is 64 bits long. Because of retro compatibility concerns, each register contains the old versions of registers (32, 16 and 8 bits).
 
 > [!TIP]
 > For example, `rax` is the main register, and the 32 first bits can be accessed by `eax`
 
-## Table of all registers
+Also, there are special registers : the pointer registers. They can not be modified, (with `MOV`) but are only used with `JMP` etc.
+
+Finally, there are the **flags**, which are 64 1-bits registers, so they are 1 or 0. They are used to store values of operations. 
+
+## General purpose registers
 
 8-byte register | Note on usage | Save type | Bytes 0-3 | Bytes 0-1 | Byte 0
 --- | --- |--- | --- | --- | ---
@@ -33,3 +37,11 @@ There are 16 registers in the `x86_64` arch, each one of them is 64 bits long. B
 
 > [!NOTE]
 > The *save type* columns indicates if the value is saved across function calls. **caller-save** (volatile) means that the value of the register is not necessarily saved across function calls, and **callee-save** (non volatile) means that they are saved across function calls.
+
+## Pointer registers
+
+`RIP` is the **extended instruction pointer**, it points at the *next* instruction. it is therefore one of the most important register.
+
+8-byte register | Note on usage | Save type | Bytes 0-3 | Bytes 0-1 | Byte 0
+--- | --- |--- | --- | --- | ---
+`RIP` | Instruction pointer | - | `EIP` | `IP` | -
