@@ -2,8 +2,11 @@
 
 default: hello_world
 
-hello_world: code/src/hello_world.c
-	gcc -o code/hello_world code/src/hello_world.c
+hello_world: code/src/hello_world.c | out
+	gcc -o code/out/hello_world code/src/hello_world.c
+
+out:
+	mkdir -p code/out
 
 clean:
-	rm -f code/hello_world
+	rm -f code/out/*
