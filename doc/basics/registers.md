@@ -45,3 +45,31 @@ Finally, there are the **flags**, which are 64 1-bits registers, so they are 1 o
 8-byte register | Note on usage | Save type | Bytes 0-3 | Bytes 0-1 | Byte 0
 --- | --- |--- | --- | --- | ---
 `RIP` | Instruction pointer | - | `EIP` | `IP` | -
+
+## Flags
+
+
+Bit(s) | Label | Description | Extended Description
+--- | --- | --- | ---
+0 |	`CF` |	Carry Flag
+1 |	1 |	Reserved
+2 |	`PF` |	Parity Flag
+3 |	0	| Reserved
+4 |	`AF` |	Auxiliary Carry Flag
+5 |	0 |	Reserved
+6 |	`ZF` |	Zero Flag | Set to **1** if the latest operation result is **0**, used for comparison
+7 |	`SF` |	Sign Flag | Set to **1** if the latest result is **negative**
+8 |	`TF` |	Trap Flag
+9 |	`IF` |	Interrupt Enable Flag
+10 | `DF` |	Direction Flag
+11 | `OF`|	Overflow Flag
+12-13 |	`IOPL` | I/O Privilege Level
+14 | `NT` | Nested Task
+15 | 0	| Reserved
+16 |	`RF` |	Resume Flag
+17 |	`VM` |	Virtual-8086 Mode
+18 |	`AC` |	Alignment Check / Access Control
+19 |	`VIF` |	Virtual Interrupt Flag
+20 |	`VIP` |	Virtual Interrupt Pending
+21 |	`ID` |	ID Flag
+22-63 |	0 |	Reserved
