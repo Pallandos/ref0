@@ -8,6 +8,7 @@ I will mostly focus on x64 architecture but i will discuss about everything.
 
 - Basics
   - [registers](./doc/basics/registers.md)
+  - [formats](./doc/basics/formats.md)
 
 ## Ressources
 
