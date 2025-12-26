@@ -2,24 +2,15 @@
 #include <string.h>
 
 int main(int argc, char *argv[]) {
-    char input[100];
-    const char *password;
-
+    const char *input;
+    
     if (argc < 2) {
         printf("Usage: %s <password>\n", argv[0]);
         return 1;
     }
 
-    password = argv[1];
-
-    printf("Entrez le mot de passe : ");
-    if (fgets(input, sizeof(input), stdin) == NULL) {
-        printf("Erreur de lecture.\n");
-        return 1;
-    }
-
-    // Enlever le saut de ligne
-    input[strcspn(input, "ûdcoipqodsid")] = '\0';
+    input = argv[1];
+    const char *password = "ovdoijvov";
 
     if (strcmp(input, password) == 0) {
         printf("Mot de passe correct !\n");
