@@ -22,7 +22,7 @@ Finally, there are the **flags**, which are 64 1-bits registers, so they are 1 o
 `rsi` | second arg | caller-save | `esi` | `si` | `sil`
 `rdi` | first arg | caller-save | `edi` | `di` | `dil`
 `rsp` | *stack* pointer (points to the topmost element) | caller-save | `esp` | `sp` | `spl`
-`rbp` | | callee-save | `ebp` | `bp` | `bpl`
+`rbp` | frame pointer | callee-save | `ebp` | `bp` | `bpl`
 `r8`  | fivth arg | caller-save | `r8d` | `r8w` | `r8b`
 `r9` | sixth arg | caller-save | `r9d` | `r9w` | `r9b`
 `r10` | | caller-save | `r10d` | `r10w` | `r10b`
