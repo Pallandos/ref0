@@ -7,8 +7,9 @@ I will mostly focus on x64 architecture but i will discuss about everything.
 ## Table of contents
 
 - Basics
-  - [registers](./doc/basics/registers.md)
-  - [formats](./doc/basics/formats.md)
+  - [registers](/doc/basics/registers.md)
+  - [formats](/doc/basics/formats.md)
+  - [stack and heap](/doc/basics/stack_and_heap.md)
 
 ## Ressources
 
