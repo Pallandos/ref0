@@ -19,3 +19,7 @@ Here are some usefull ressources :
 - [x86 assembly cheatsheet](https://ref0.pallandos.dev/ressources/x86-64-reference.pdf)
 - [Reverse Engineering for beginer](https://ref0.pallandos.dev/ressources/EN%20-%20Reverse%20Engineering%20for%20Beginners%20-%20Dennis%20Yurichev.pdf), by Dennis Yurichev
 - [guide of x86 assembly instruction](https://www.felixcloutier.com/x86/)
+
+## Tools
+
+- [Online compiler and assembly explorer]
